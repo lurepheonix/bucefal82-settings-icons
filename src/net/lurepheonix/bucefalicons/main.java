@@ -19,7 +19,6 @@ public class main implements IXposedHookZygoteInit, IXposedHookInitPackageResour
             return;
 
         XModuleResources modRes = XModuleResources.createInstance(MODULE_PATH, resparam.res);
-        resparam.res.setReplacement("com.android.settings", "drawable", "ic_ajuster", modRes.fwd(R.drawable.ic_ajuster));
         resparam.res.setReplacement("com.android.settings", "drawable", "ic_launcher", modRes.fwd(R.drawable.ic_launcher));
         resparam.res.setReplacement("com.android.settings", "drawable", "ic_settings_about", modRes.fwd(R.drawable.ic_settings_about));
         resparam.res.setReplacement("com.android.settings", "drawable", "ic_settings_accessibility", modRes.fwd(R.drawable.ic_settings_accessibility));
@@ -39,8 +38,6 @@ public class main implements IXposedHookZygoteInit, IXposedHookInitPackageResour
         resparam.res.setReplacement("com.android.settings", "drawable", "ic_settings_sound", modRes.fwd(R.drawable.ic_settings_sound));
         resparam.res.setReplacement("com.android.settings", "drawable", "ic_settings_storage", modRes.fwd(R.drawable.ic_settings_storage));
         resparam.res.setReplacement("com.android.settings", "drawable", "ic_settings_wireless", modRes.fwd(R.drawable.ic_settings_wireless));
-        resparam.res.setReplacement("com.android.settings", "drawable", "ic_update_rom", modRes.fwd(R.drawable.ic_update_rom));
-        resparam.res.setReplacement("com.android.settings", "drawable", "ic_v4a", modRes.fwd(R.drawable.ic_v4a));
         resparam.res.setReplacement("com.android.settings", "drawable", "ic_settings_hdmi", modRes.fwd(R.drawable.ic_settings_hdmi));
         resparam.res.setReplacement("com.android.settings", "drawable", "ic_settings_screen_scale", modRes.fwd(R.drawable.ic_settings_screen_scale)); 
     }
